@@ -1,0 +1,32 @@
+<h1>Table: {{tableName}}</h1>
+<h3>Select a table:</h3>
+<button type="button" class="btn btn-primary btn-md" ng-click="changeTable('view')">View</button>
+<button type="button" class="btn btn-primary btn-md" ng-click="changeTable('box')">Box</button>
+<button type="button" class="btn btn-primary btn-md" ng-click="changeTable('element')">Element</button>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+
+	<!-- <tbody>
+		<tr ng-repeat="item in contacts" ng-click="editContact(item)">
+			<td ng-repeat="col in colFields" ng-click="detail(item)">
+				{{ item[col] }}
+			</td>
+		</tr>
+	</tbody> -->
+</table>
+
+<md-button class="md-fab md-primary" aria-label="Add">
+	 <md-icon md-font-icon="fa-plus" class="fa fa-2x"></md-icon>
+</md-button>
+<md-button class="md-fab md-primary" aria-label="Remove">
+	 <md-icon md-font-icon="fa-minus" class="fa fa-2x"></md-icon>
+</md-button>
+<md-button class="md-fab md-primary" aria-label="Update">
+	 <md-icon md-font-icon="fa-reply" class="fa fa-2x"></md-icon>
+</md-button>
