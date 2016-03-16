@@ -4,12 +4,12 @@ angular.module('main', [
   'ngRoute',
   'ngCookies',
   'ngMaterial',
-  'oks'
+  'marks'
 ])
 
-.constant('INSTANCE_URL', 'http://localhost')
+.constant('INSTANCE_URL', 'http://localhost:8081')
 
-.constant('APP_API_KEY', '837d4c936a7d41830afd45690d8b2b164535f71b6fd694be6fc947105968b489')
+.constant('APP_API_KEY', '46090a3872590fcc97886b4c2a4c5d5a1b1f3af2b8fccb1327d4d7fad73160e7')
 
 .run([
   '$cookies', 'APP_API_KEY', '$http', '$rootScope', '$window',
@@ -20,8 +20,7 @@ angular.module('main', [
   }
 ])
 
-
-// Config - configure applicaiton routes and settings
+// Config - configure application routes and settings
 .config([ 
   '$routeProvider', '$httpProvider', 'APP_API_KEY',
   
@@ -34,7 +33,8 @@ angular.module('main', [
     $httpProvider.interceptors.push('httpInterceptor');
   }
 ])
-// Authentication interceptor. Executes a function everytime before sending any request.
+
+// Executes a function everytime before sending any request.
 .factory('httpInterceptor', [
   '$location', '$q', '$injector', 'INSTANCE_URL',
 
@@ -58,12 +58,6 @@ angular.module('main', [
         return config;
       },
       responseError: function (result) {
-
-			// If status is 401 or 403 with token blacklist error then redirect to login 
-			if (result.status === 401 || (result.status === 403 && result.data.error.message.indexOf('token') > -1)) {
-				$location.path('/login');	
-			} 
-
 			var $mdToast = $injector.get('$mdToast');
 			$mdToast.show($mdToast.simple().content('Error: ' + result.data.error.message));
 
