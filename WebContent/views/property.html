@@ -1,0 +1,103 @@
+<md-tabs md-dynamic-height="true">
+    <md-tab label="New Property">
+        <div layout="row">
+            <md-content flex>
+                <form name="propertyForm" ng-submit="save()">
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Pk Id</label><input ng-model="property.pkId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>View Id</label><input ng-model="property.viewId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Box Id</label><input ng-model="property.boxId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Label Id</label><input ng-model="property.labelId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Element Type</label><input ng-model="property.elementType">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Element Property</label><input ng-model="property.elementProperty">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Element Value</label><input ng-model="property.elementValue">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Property Order</label><input ng-model="property.propertyOrder">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Enabled</label><input ng-model="property.enabled">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Owner</label><input ng-model="property.owner">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Organization Id</label><input ng-model="property.organizationId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Last Changed By</label><input ng-model="property.lastChangedBy">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Last Changed Date</label><input ng-model="property.lastChangedDate">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Ic Rule</label><input ng-model="property.icRule">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Replace Property All Elements</label><input ng-model="property.replacePropertyAllElements">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Document Type</label><input ng-model="property.documentType">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Html Tag Id</label><input ng-model="property.htmlTagId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Include Pages</label><input ng-model="property.includePages">
+                        </md-input-container>                        
+                    </div>
+
+                    <md-button type="submit" class="md-raised md-primary" ng-disabled="propertyForm.$invalid">Save</md-button>
+                    <md-button type="button" class="md-raised md-warn" ng-click="goBack()">Return</md-button>
+                </form>
+            </md-content>
+        </div>
+    </md-tab>
+</md-tabs>

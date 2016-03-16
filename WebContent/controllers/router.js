@@ -28,7 +28,7 @@ angular.module('main', [
   function ($routeProvider, $httpProvider, APP_API_KEY) {
     $routeProvider
         .otherwise({
-          redirectTo:'/oks'
+          redirectTo:'/'
         });
 
     $httpProvider.interceptors.push('httpInterceptor');

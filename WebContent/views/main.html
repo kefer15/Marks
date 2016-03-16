@@ -3,30 +3,30 @@
 <button type="button" class="btn btn-primary btn-md" ng-click="changeTable('view')">View</button>
 <button type="button" class="btn btn-primary btn-md" ng-click="changeTable('box')">Box</button>
 <button type="button" class="btn btn-primary btn-md" ng-click="changeTable('element')">Element</button>
+<button type="button" class="btn btn-primary btn-md" ng-click="changeTable('property')">Property</button>
 
 <table class="table table-hover">
 	<thead>
 		<tr>
-			<th>Id</th>
-			<th>Name</th>
+			<th ng-repeat="col in colLabels"> {{ col }} </th>
 		</tr>
 	</thead>
 
-	<!-- <tbody>
-		<tr ng-repeat="item in contacts" ng-click="editContact(item)">
-			<td ng-repeat="col in colFields" ng-click="detail(item)">
+	<tbody>
+		<tr ng-repeat="item in data">
+			<td ng-repeat="col in colFields">
 				{{ item[col] }}
 			</td>
 		</tr>
-	</tbody> -->
+	</tbody>
 </table>
 
-<md-button class="md-fab md-primary" aria-label="Add">
+<md-button class="md-fab md-primary" aria-label="Add" ng-click="addData()">
 	 <md-icon md-font-icon="fa-plus" class="fa fa-2x"></md-icon>
 </md-button>
-<md-button class="md-fab md-primary" aria-label="Remove">
+<md-button class="md-fab md-primary" aria-label="Remove" ng-click="removeData()">
 	 <md-icon md-font-icon="fa-minus" class="fa fa-2x"></md-icon>
 </md-button>
-<md-button class="md-fab md-primary" aria-label="Update">
+<md-button class="md-fab md-primary" aria-label="Update" ng-click="updateData()">
 	 <md-icon md-font-icon="fa-reply" class="fa fa-2x"></md-icon>
 </md-button>

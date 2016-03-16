@@ -1,0 +1,104 @@
+<md-tabs md-dynamic-height="true">
+    <md-tab label="New View">
+        <div layout="row">
+            <md-content flex>
+                <form name="viewForm" ng-submit="save()">
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Pk Id</label><input ng-model="view.pkId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Page View Id</label><input ng-model="view.pageViewId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>View Id</label><input ng-model="view.viewId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Title</label><input ng-model="view.title">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Organization Id</label><input ng-model="view.organizationId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Visible Mobile</label><input ng-model="view.visibleMobile">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>General Model</label><input ng-model="view.generalModel">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Last Changed By</label><input ng-model="view.lastChangedBy">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Last Changed Date</label><input ng-model="view.lastChangedDate">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Owner</label><input ng-model="view.owner">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Puridiom View Id</label><input ng-model="view.puridiomViewId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Page Type</label><input ng-model="view.pageType">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Sub Step</label><input ng-model="view.subStep">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>View Group Id</label><input ng-model="view.viewGroupId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Full Browse</label><input ng-model="view.fullBrowse">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Puridiom Process Id</label><input ng-model="view.puridiomProcessId">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Document Type</label><input ng-model="view.documentType">
+                        </md-input-container>                        
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container flex>
+                            <label>Enabled</label><input ng-model="view.enabled">
+                        </md-input-container>                        
+                    </div>
+                    
+
+                    <md-button type="submit" class="md-raised md-primary" ng-disabled="viewForm.$invalid">Save</md-button>
+                    <md-button type="button" class="md-raised md-warn" ng-click="goBack()">Return</md-button>
+                </form>
+            </md-content>
+        </div>
+    </md-tab>
+</md-tabs>
